@@ -6,4 +6,4 @@ This is an academic reference manager that helps with the planning of research p
 ## userful links
 
 - [database ERD](https://lucid.app/lucidchart/9468b596-2165-42bd-a1f6-628a192cebcf/edit?view_items=co402Gf2hKJl&invitationId=inv_6de47593-3f67-4ee2-91c5-fe80e3777eca)
-- [API spect](https://studio-ws.apicur.io/sharing/c9807533-f948-4831-a98e-48bdeeead36e)
+- [API spec](https://studio-ws.apicur.io/sharing/c9807533-f948-4831-a98e-48bdeeead36e)
