@@ -1,0 +1,30 @@
+*{
+    border: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    background-color: antiquewhite;
+    height: 3rem;
+}
+
+.headertext{
+    margin-left: 3rem;
+    
+    font-size: larger;
+}
+
+
+.loginPage{
+    display: flex;
+    flex-flow: column;
+    margin: 10rem;
+}
+
+.login,.register{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
