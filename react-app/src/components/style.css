@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 *{
     border: 0;
     margin: 0;
@@ -10,21 +12,91 @@ header {
 }
 
 .headertext{
+    margin-top: 10px;
     margin-left: 3rem;
-    
+    font-family: 'Archivo Black', sans-serif;
     font-size: larger;
+    color:#2D2A27
 }
 
 
 .loginPage{
+    background-image: url("../img/laptop-computer-book-workplace-library-room.jpg");
+    background-size: cover;
+    width:  100vw;
+    height: 100vh;
     display: flex;
-    flex-flow: column;
-    margin: 10rem;
+    flex-direction: row;
+    
+    justify-content: flex-end;
+    
 }
 
+.loginIntro {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.introText {
+    margin-top: 15%;
+    margin-left: 3%;
+    font-family: 'Archivo Black', sans-serif;
+    color: antiquewhite;
+    font-size: 4rem;
+    text-align: left;
+
+}
+
+.loginNav {
+    margin-top:3rem;
+}
+
+
+.loginSection {
+    height:fit-content;
+    margin-right: 10%;
+    margin-top: 10%;
+    border-radius: 10%;
+    background-color:rgba(252, 253, 252, 0.6);
+
+    
+
+}
+
+
 .login,.register{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     place-items: center;
+}
+
+.button {
+    margin-top: 1rem;
+}
+
+.profilePage {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: 	#6A635C;
+}
+
+.userInfo {
+
+    background-color: antiquewhite;
+}
+
+.sideNavBar {
+    margin-top: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: row;
+
 }
 

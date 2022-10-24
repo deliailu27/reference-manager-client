@@ -4,8 +4,6 @@ import './style.css'
 const Header =()=>{
     
 
-
-
     return (
         <div>
             <header className='header'>
