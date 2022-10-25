@@ -61,8 +61,6 @@ header {
     border-radius: 10%;
     background-color:rgba(252, 253, 252, 0.6);
 
-    
-
 }
 
 
@@ -83,12 +81,13 @@ header {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    background-color: 	#6A635C;
+    background-color: #6A635C;
 }
 
 .userInfo {
-
-    background-color: antiquewhite;
+    padding: 0.5rem;
+    background-color: white;
+    height: fit-content;
 }
 
 .sideNavBar {
@@ -96,7 +95,46 @@ header {
     margin-left: 3rem;
     margin-right: 3rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
 
+.avatar {
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+}
+
+.username {
+    color: black;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.description {
+    color: #2D2A27;
+    padding-bottom: 1rem;
+}
+
+.editIcon {
+ margin-top: 10%;
+    
+}
+
+.editIcon:hover {
+    cursor: pointer;
+}
+
+
+
+.navList {
+    margin-top: 1rem;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.profileContent {
+   flex-grow: 1;
+   margin-right: 3rem;
+   margin-top:1rem;
+   width: auto;
+   background-color: #FFEFD5;
 }
 
