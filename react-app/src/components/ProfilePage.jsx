@@ -5,19 +5,31 @@ import Typography from '@mui/joy/Typography';
 import CardContent from '@mui/joy/CardContent';
 import Header from "./Header"
 import { createTheme, ThemeProvider} from "@mui/material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 import './style.css'
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Papers from "./Papers";
 import ContentNav from "./ContentNav";
+import {searchGoogle} from "../api";
+import paperdb from "../db/paper";
 
 
 
 const ProfilePage =()=>{
     const [editing, setEditing]=useState(false)
+    const [showFolders, setShowFolders]=useState(false)
     const navigate =useNavigate()
     const [content, setContent] = useState ('papers')
+    const [papers, setPapers]=useState([])
+
+    useEffect(()=>{
+        const myPapers = paperdb
+            setPapers(myPapers)
+            console.log('my papers:',myPapers)
+    })
 
 
     const logout =()=>{
@@ -27,6 +39,20 @@ const ProfilePage =()=>{
     const editUser =()=>{
       setEditing(true)
     }
+
+    const toggleFolders = ()=>{
+        if(showFolders){setShowFolders(false)}
+        else setShowFolders(true)
+    }
+
+    
+        const togglePapers =()=>{
+            setContent('papers')
+            
+    
+        }
+  
+   
 
 
     const buttonTheme= createTheme({
@@ -71,7 +97,7 @@ const ProfilePage =()=>{
 
             <div className="navList">
             <List sx={style} component="nav" aria-label="mailbox folders">
-              <ListItem button>
+              <ListItem button onClick={togglePapers}>
                  <ListItemText primary="Papers" />
               </ListItem>
               <Divider />
@@ -82,8 +108,9 @@ const ProfilePage =()=>{
                   <ListItemText primary="Todos" />
               </ListItem>
               <Divider light />
-             <ListItem button>
+             <ListItem button onClick={toggleFolders}>
                <ListItemText primary="Folders" />
+               {showFolders?(<KeyboardArrowUpIcon/>):(<KeyboardArrowDownIcon/>)}
              </ListItem>
             </List>
             </div>
@@ -91,7 +118,9 @@ const ProfilePage =()=>{
 
             <div className="profileContent">
                 <ContentNav content={content}/>
-            {content==='paper'&&(<Papers/>)}
+                <div className="contentDisplay">
+                <Papers papers={papers} />
+                </div>
                 
             </div>
            
