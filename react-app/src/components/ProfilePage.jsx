@@ -9,12 +9,15 @@ import { createTheme, ThemeProvider} from "@mui/material";
 import './style.css'
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Papers from "./Papers";
+import ContentNav from "./ContentNav";
 
 
 
 const ProfilePage =()=>{
     const [editing, setEditing]=useState(false)
     const navigate =useNavigate()
+    const [content, setContent] = useState ('papers')
 
 
     const logout =()=>{
@@ -68,26 +71,27 @@ const ProfilePage =()=>{
 
             <div className="navList">
             <List sx={style} component="nav" aria-label="mailbox folders">
-      <ListItem button>
-        <ListItemText primary="Papers" />
-      </ListItem>
-      <Divider />
-      <ListItem button divider>
-        <ListItemText primary="Projects" />
-      </ListItem>
-      <ListItem button>
-        <ListItemText primary="Todos" />
-      </ListItem>
-      <Divider light />
-      <ListItem button>
-        <ListItemText primary="Folders" />
-      </ListItem>
-    </List>
+              <ListItem button>
+                 <ListItemText primary="Papers" />
+              </ListItem>
+              <Divider />
+              <ListItem button divider>
+                  <ListItemText primary="Projects" />
+              </ListItem>
+              <ListItem button>
+                  <ListItemText primary="Todos" />
+              </ListItem>
+              <Divider light />
+             <ListItem button>
+               <ListItemText primary="Folders" />
+             </ListItem>
+            </List>
             </div>
             </div>
 
             <div className="profileContent">
-
+                <ContentNav content={content}/>
+            {content==='paper'&&(<Papers/>)}
                 
             </div>
            

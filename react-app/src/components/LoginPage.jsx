@@ -8,6 +8,7 @@ import './style.css'
 const LoginPage =()=>{
     const navigate = useNavigate()
     const [handleReg,setHandleReg]= useState(true)
+   
 
     const switchLogin =()=>{
         setHandleReg(true)
@@ -42,8 +43,13 @@ const LoginPage =()=>{
             <p>bibliography assitant </p>
             <p>for students </p> 
             <p>and researchers</p>
-            
             </div>
+            <div className="introText2">
+                <p>
+                    plan and manage your research projects and reading lists
+                </p>
+            </div>
+            
         </div>
 
         <div className='loginSection'>
