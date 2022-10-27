@@ -7,6 +7,7 @@ import Header from "./Header"
 import { createTheme, ThemeProvider} from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import FolderIcon from '@mui/icons-material/Folder';
 
 import './style.css'
 import { useNavigate } from "react-router-dom";
@@ -14,6 +15,8 @@ import { useEffect, useState } from "react";
 import Papers from "./Papers";
 import ContentNav from "./ContentNav";
 import paperdb from "../db/paper";
+import folderdb from "../db/folders";
+
 
 
 
@@ -22,13 +25,14 @@ const ProfilePage =()=>{
     const [showFolders, setShowFolders]=useState(false)
     const navigate =useNavigate()
     const [content, setContent] = useState ('papers')
-    const [papers, setPapers]=useState([])
+    const [papers, setPapers]=useState(paperdb)
+    const [folders,setFolders]=useState(folderdb)
 
-    useEffect(()=>{
-        const myPapers = paperdb
-            setPapers(myPapers)
-            console.log('my papers:',myPapers)
-    })
+    const openFolder=(e)=>{
+       const paperToRender = folders.filter((folder)=>(folder.folderName===e.target.id))
+       console.log(paperToRender[0].items)
+       setPapers(paperToRender[0].items)
+    }
 
 
     const logout =()=>{
@@ -111,6 +115,24 @@ const ProfilePage =()=>{
                <ListItemText primary="Folders" />
                {showFolders?(<KeyboardArrowUpIcon/>):(<KeyboardArrowDownIcon/>)}
              </ListItem>
+             <Divider light />
+               {showFolders?(
+               <div className="folderList">
+              <List sx={style} component="nav" aria-label="mailbox folders">
+                  {folders.map((folder)=>(
+                   <ListItem button onClick={openFolder}>
+                   <div className="folderListItem">
+                    <div id={folder.folderName} className="folderName"> {folder.folderName}</div>
+                    <div className="folderIcon">
+                        <p>{folder.items.length}</p>
+                     <FolderIcon fontSize="small"/>
+                     </div>
+                     </div>
+                </ListItem>
+            ))}
+        </List>
+        </div>
+        ):(<></>)}
             </List>
             </div>
             </div>

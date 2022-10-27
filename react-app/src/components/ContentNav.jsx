@@ -4,6 +4,8 @@ import {createTheme,ThemeProvider} from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 
 const ContentNav = ({ content,papers })=>{
+
+    
   
 
   const paperCount = papers.length

@@ -274,3 +274,20 @@ h1 {
     display: inline-block;
     margin-left: 1rem;
 }
+
+.folderListItem {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.folderName {
+    flex-grow: 1;
+}
+
+.folderIcon{
+    display: flex;
+    flex-direction: row;
+}
+
