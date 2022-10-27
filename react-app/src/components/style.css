@@ -154,9 +154,9 @@ header {
 }
 
 .contentNav {
-    height: 100px;
-    background-color: white;
-    margin: 1rem;
+    height: 150px;
+    background-image:url('../img/photo-1505488387362-48bc38155987.avif');
+   
 }
 
 .cardContent {
@@ -211,3 +211,66 @@ h2:hover{
     font-family: 'Archivo Black', sans-serif;
 }
 
+.cardDetails {
+
+}
+
+.detailList {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.paperButton {
+    margin-left: 1rem;
+
+}
+
+
+.contentNav {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contentNavLeftBar {
+    flex-grow: 1;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    background-color:rgba(247, 231, 203, 0.8);
+}
+
+h1 {
+    font-size: medium;
+   margin-top: 1rem;
+}
+
+.contentNavButtons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    margin-top: 1rem;
+    
+}
+
+.contentNavSearch {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    background-color:rgba(247, 231, 203, 0.8);
+}
+
+
+.search:hover {
+    cursor: pointer;
+}
+
+.readIcon {
+    display: inline-block;
+    margin-left: 1rem;
+}

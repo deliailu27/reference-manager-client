@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Papers from "./Papers";
 import ContentNav from "./ContentNav";
-import {searchGoogle} from "../api";
 import paperdb from "../db/paper";
 
 
@@ -117,7 +116,7 @@ const ProfilePage =()=>{
             </div>
 
             <div className="profileContent">
-                <ContentNav content={content}/>
+                <ContentNav content={content} papers={papers}/>
                 <div className="contentDisplay">
                 <Papers papers={papers} />
                 </div>

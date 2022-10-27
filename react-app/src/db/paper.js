@@ -1,6 +1,7 @@
 const paperdb = [
   {
     position: 0,
+    read: true,
     title: 'A new biology for a new century',
     result_id: 'KNJ0p4CbwgoJ',
     link: 'https://journals.asm.org/doi/abs/10.1128/MMBR.68.2.173-186.2004',
@@ -25,6 +26,7 @@ const paperdb = [
   },
   {
     position: 1,
+    read: false,
     title: 'The biology of mycorrhiza.',
     result_id: '6zRLFbcxtREJ',
     link: 'https://www.cabdirect.org/cabdirect/abstract/19690600367',
@@ -48,6 +50,7 @@ const paperdb = [
   },
   {
     position: 2,
+    read: false,
     title: 'The biology of eucalypts.',
     result_id: 'HFdEElNr3IgJ',
     link: 'https://www.cabdirect.org/cabdirect/abstract/19760634482',
@@ -71,6 +74,7 @@ const paperdb = [
   },
   {
     position: 3,
+    read: false,
     title: 'Introduction to a submolecular biology',
     result_id: '6Yb0qOX88FMJ',
     type: 'Book',
@@ -91,6 +95,7 @@ const paperdb = [
   },
   {
     position: 4,
+    read: false,
     title: 'The biology of Pseudocalanus',
     result_id: 'bs-D_MeC14YJ',
     link: 'https://www.sciencedirect.com/science/article/pii/S0065288108604046',
@@ -113,6 +118,7 @@ const paperdb = [
   },
   {
     position: 5,
+    read: false,
     title: 'Sealice on salmonids: their biology and control',
     result_id: 'Rn1qFVLRfKwJ',
     link: 'https://www.sciencedirect.com/science/article/pii/S0065308X0860233X',
@@ -135,6 +141,7 @@ const paperdb = [
   },
   {
     position: 6,
+    read: false,
     title: 'General biology',
     result_id: 'pQTji7x-COAJ',
     link: 'https://www.taylorfrancis.com/chapters/edit/10.1201/9781420052275-1/general-biology-ronald-fayer',
@@ -159,6 +166,7 @@ const paperdb = [
   },
   {
     position: 7,
+    read: false,
     title: 'Biology of toxorhynchites',
     result_id: 'UTDQS0ZhKyAJ',
     link: 'https://www.annualreviews.org/doi/pdf/10.1146/annurev.en.26.010181.001111',
@@ -182,6 +190,7 @@ const paperdb = [
   },
   {
     position: 8,
+    read: false,
     title: 'Biology data book',
     result_id: 'd8thHtTwq6YJ',
     type: 'Pdf',
@@ -205,6 +214,7 @@ const paperdb = [
   },
   {
     position: 9,
+    read: false,
     title: 'Biology of the Cyclostomes',
     result_id: 'IUmhOhGaDaEJ',
     type: 'Book',

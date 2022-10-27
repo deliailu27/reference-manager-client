@@ -1,5 +1,5 @@
 import { Button, createTheme, TextField,ThemeProvider } from '@mui/material';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './Header';
 import './style.css'
