@@ -42,12 +42,13 @@ const PaperItem =(paper,papers)=>{
     
     const markRead=()=>{
         if(read){
+            paper.paper.read=false
             setRead(false)
         }
-        else {setRead(true); paper.paper.read=true}
+        else {setRead(true)}
     }
 
-    console.log(paper.paper)
+ 
 
     const buttonTheme= createTheme({
         palette:{

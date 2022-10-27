@@ -26,7 +26,7 @@ const paperdb = [
   },
   {
     position: 1,
-    read: false,
+    read: true,
     title: 'The biology of mycorrhiza.',
     result_id: '6zRLFbcxtREJ',
     link: 'https://www.cabdirect.org/cabdirect/abstract/19690600367',
