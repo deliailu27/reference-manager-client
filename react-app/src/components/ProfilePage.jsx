@@ -51,7 +51,7 @@ const ProfilePage =()=>{
     
         const togglePapers =()=>{
             setContent('papers')
-            
+            setPapers(paperdb)
     
         }
   

@@ -291,3 +291,17 @@ h1 {
     flex-direction: row;
 }
 
+.filterBar {
+    height: 50px;
+    display: flex;
+    place-items: center;
+}
+
+.filterBarText {
+    margin-left: 10px;
+}
+
+.radioButtons {
+    margin-left: 10px;
+}
+

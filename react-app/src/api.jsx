@@ -1,6 +1,6 @@
 
 
-const searchGoogle= ()=>{
+
 
 
 const SerpApi = require('google-search-results-nodejs');
@@ -8,7 +8,7 @@ const search = new SerpApi.GoogleSearch("6271c5e0c3f16de6713eee2d9911bcc08bd6641
 
 const params = {
   engine: "google_scholar",
-  q: "biology"
+  q: "biological chemistry"
 };
 
 const callback = function(data) {
@@ -18,6 +18,5 @@ const callback = function(data) {
 // Show result as JSON
 search.json(params, callback);
 
-}
 
-export default searchGoogle
+
